@@ -8,7 +8,7 @@ def find_shortest_distance(text, word1, word2):
     distance = 0
     last_seen_word = ""
     for word in text.split():
-        word = word.strip(',').strip('.')
+        word = word.strip(',').strip('.').strip('?').strip('!').strip(':').strip(';').strip('"').strip('(').strip(')')
         if word == word1 or word == word2:
             if not last_seen_word:
                 last_seen_word = word
